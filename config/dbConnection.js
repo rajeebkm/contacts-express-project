@@ -10,7 +10,8 @@ const connectDb = async () => {
     console.log(
       "Database connected: ",
       connect.connection.host,
-      connect.connection.name
+      connect.connection.name,
+      connect.connection.port,
     );
   } catch (error) {
     console.log(error);
