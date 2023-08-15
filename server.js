@@ -25,6 +25,7 @@ const port = process.env.PORT || 5000;
 // will help us to parse the data strea, that we receive from the client on the serve side.
 app.use(express.json());
 app.use("/api/contacts", require("./routes/contactRoutes"));
+app.use("/api/users", require("./routes/userRoutes"));
 app.use(errorHandler);
 
 // listen on the app on the port 500

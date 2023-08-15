@@ -4,6 +4,10 @@ const Contact = require("../models/contactModel");
 // Controllers contains all Logics for request, response, connect to database, etc
 // Whenever we create the API methods, we always need to give some labels to that
 
+
+//@desc Get all contacts
+//route GET /api/contacts
+//@access public
 const getContacts = asyncHandler(async (req, res) => {
   const contacts = await Contact.find();
   //   res.status(200).json({
@@ -12,7 +16,7 @@ const getContacts = asyncHandler(async (req, res) => {
   res.status(200).json(contacts);
 });
 
-//@desc Get all contact
+//@desc Get contact by Id
 //route GET /api/contacts/:id
 //@access public
 const getContact = asyncHandler(async (req, res) => {
