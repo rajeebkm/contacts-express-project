@@ -26,6 +26,7 @@ const port = process.env.PORT || 5000;
 app.use(express.json());
 app.use("/api/contacts", require("./routes/contactRoutes"));
 app.use("/api/users", require("./routes/userRoutes"));
+app.use("/data", require("./demo/dataJs")); // demo data
 app.use(errorHandler);
 
 // listen on the app on the port 500
